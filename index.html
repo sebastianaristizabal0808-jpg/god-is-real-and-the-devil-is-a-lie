@@ -59,6 +59,11 @@
             });
         }
     </script>
+        <script>
+        function strugglingToday() {
+            alert("💛 You're not alone right now.\n\nGod sees you. He loves you. He has never left you.\n\nCall or text: 1-800-662-HELP (SAMHSA)\n\nYou can also post in the Community section below — people here will pray for you.\n\nOne breath at a time. One step with Jesus.");
+        }
+    </script>
     <body class="bg-emerald-50 text-emerald-950">
 
     <!-- Navbar -->
@@ -123,7 +128,19 @@
                 </button>
             </div>
             </div>
+                <p class="mt-4 text-emerald-100 font-medium">Dax - "God, Can You Hear Me?"</p>
+            </div>
 
+            <!-- I'M STRUGGLING TODAY BUTTON - paste it here -->
+            <div class="mt-6 flex justify-center">
+                <button onclick="strugglingToday()" 
+                        class="bg-white/20 hover:bg-white/30 border-2 border-white text-white px-8 py-4 rounded-3xl font-semibold text-xl flex items-center gap-3 transition">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    I'm struggling today
+                </button>
+            </div>
+
+            <p class="text-emerald-100 text-sm">Daily updated for your recovery journey • Built by someone who was just like you before. YOU got this</p>
             <p class="text-emerald-100 text-sm">Daily updated for your recovery journey • Built by someone who was just like you before, YOU got this</p>
         </div>
     </header>
@@ -167,20 +184,35 @@
         </div>
     </section>
 
-    <!-- Testimonies -->
+        <!-- Testimonies -->
     <section id="testimonies" class="bg-emerald-100 py-16">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-bold heading-font text-center mb-8">Real Testimonies • God Sets People Free</h2>
             <div id="testimoniesContainer" class="grid md:grid-cols-3 gap-8"></div>
             
-            <div class="mt-16 bg-white rounded-3xl shadow-xl p-8 max-w-2xl mx-auto text-center">
-                <h3 class="text-2xl font-semibold mb-4">Share YOUR Testimony</h3>
-                <form action="https://formsubmit.co/sebastianaristizabal0808@gmail.com" method="POST" class="space-y-4">
-                    <input type="text" name="name" placeholder="Your name (or Anonymous)" class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600">
-                    <textarea name="story" rows="5" placeholder="Tell us how God changed your life..." class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600"></textarea>
-                    <input type="hidden" name="_subject" value="New Testimony from God is real and the devil is a lie!">
-                    <button type="submit" class="w-full bg-emerald-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-emerald-700 transition">Submit Testimony</button>
-                </form>
+            <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimony Form -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Share YOUR Testimony</h3>
+                    <form action="https://formsubmit.co/sebastianaristizabal0808@gmail.com" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Your name (or Anonymous)" class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600">
+                        <textarea name="story" rows="5" placeholder="Tell us how God changed your life..." class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600"></textarea>
+                        <input type="hidden" name="_subject" value="New Testimony!">
+                        <button type="submit" class="w-full bg-emerald-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-emerald-700 transition">Submit Testimony</button>
+                    </form>
+                </div>
+
+                <!-- NEW PRAYER REQUEST FORM -->
+                <div class="bg-white rounded-3xl shadow-xl p-8 text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Need Prayer?</h3>
+                    <p class="mb-6 text-emerald-700">We will pray for you. God hears every cry.</p>
+                    <form action="https://formsubmit.co/sebastianaristizabal0808@gmail.com" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Your name (or Anonymous)" class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600">
+                        <textarea name="prayer" rows="5" placeholder="What would you like prayer for?" class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600"></textarea>
+                        <input type="hidden" name="_subject" value="New Prayer Request!">
+                        <button type="submit" class="w-full bg-sky-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-sky-700 transition">Send Prayer Request</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
