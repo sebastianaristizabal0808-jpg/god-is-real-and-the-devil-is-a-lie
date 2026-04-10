@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="God is real and the devil is a lie - Hope, quotes, articles, music, testimonies & community for addiction recovery.">
+    <title>God is real and the devil is a lie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%); }
+    </style>
+</head>
+<body class="bg-emerald-50 text-emerald-950">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-dove text-3xl text-emerald-600"></i>
+                <h1 class="text-2xl font-bold heading-font">God is real</h1>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-lg">
+                <a href="#quotes" class="hover:text-emerald-600 transition">Quotes</a>
+                <a href="#articles" class="hover:text-emerald-600 transition">Articles</a>
+                <a href="#music" class="hover:text-emerald-600 transition">Music</a>
+                <a href="#testimonies" class="hover:text-emerald-600 transition">Testimonies</a>
+                <a href="#community" class="hover:text-emerald-600 transition">Community</a>
+            </div>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white px-6 py-4 border-t">
+            <a href="#quotes" onclick="toggleMobileMenu()" class="block py-3 text-lg">Quotes</a>
+            <a href="#articles" onclick="toggleMobileMenu()" class="block py-3 text-lg">Articles</a>
+            <a href="#music" onclick="toggleMobileMenu()" class="block py-3 text-lg">Music</a>
+            <a href="#testimonies" onclick="toggleMobileMenu()" class="block py-3 text-lg">Testimonies</a>
+            <a href="#community" onclick="toggleMobileMenu()" class="block py-3 text-lg">Community</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg text-white py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-7xl font-bold heading-font mb-6">God is real<br>and the devil is a lie.</h2>
+            <p class="text-2xl md:text-3xl max-w-2xl mx-auto mb-10">Healing. Hope. Freedom from addiction.<br>You are not alone.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#music" class="bg-white text-emerald-700 px-8 py-4 rounded-2xl font-semibold text-xl flex items-center gap-2 hover:scale-105 transition">
+                    <i class="fa-solid fa-music"></i> Listen Now
+                </a>
+                <a href="#testimonies" class="bg-transparent border-2 border-white px-8 py-4 rounded-2xl font-semibold text-xl flex items-center gap-2 hover:bg-white hover:text-emerald-700 transition">
+                    Read Testimonies
+                </a>
+            </div>
+            <p class="mt-12 text-emerald-100 text-sm">Daily updated for your recovery journey • Built for SebbyDinero1017</p>
+        </div>
+    </header>
+
+    <!-- Daily Quote -->
+    <section id="quotes" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold heading-font text-center mb-8">Daily Hope • Bible Quotes</h2>
+        <div id="quoteCarousel" class="bg-white rounded-3xl shadow-xl p-10 text-center max-w-2xl mx-auto">
+            <p id="quoteText" class="text-2xl italic mb-6">"Loading hope..."</p>
+            <p id="quoteVerse" class="text-emerald-600 font-semibold"></p>
+            <button onclick="nextQuote()" class="mt-8 px-6 py-3 bg-emerald-600 text-white rounded-2xl hover:bg-emerald-700 transition">
+                Next Hope <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Articles - FIXED & CLICKABLE (pop-up opens full devotional) -->
+    <section id="articles" class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold heading-font text-center mb-8">Latest Articles & Devotionals</h2>
+            <div id="articlesContainer" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- Healing Music -->
+    <section id="music" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold heading-font text-center mb-8">Healing Music • Songs for Recovery</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="aspect-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/e3DFQ75CpHc" frameborder="0" allowfullscreen></iframe></div>
+                <div class="p-6"><h3 class="font-semibold text-xl">Zach Williams - The Struggle</h3><p class="text-emerald-600">A powerful song for anyone battling addiction</p></div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="aspect-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/USclW21NFmk" frameborder="0" allowfullscreen></iframe></div>
+                <div class="p-6"><h3 class="font-semibold text-xl">Ben Fuller - Don't Let Me Forget</h3><p class="text-emerald-600">Remember God's grace in your lowest moments</p></div>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="aspect-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/w_WbsUDhvNI" frameborder="0" allowfullscreen></iframe></div>
+                <div class="p-6"><h3 class="font-semibold text-xl">Micah Tyler - Recover</h3><p class="text-emerald-600">Perfect song for your recovery journey</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonies -->
+    <section id="testimonies" class="bg-emerald-100 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold heading-font text-center mb-8">Real Testimonies • God Sets People Free</h2>
+            <div id="testimoniesContainer" class="grid md:grid-cols-3 gap-8"></div>
+            
+            <div class="mt-16 bg-white rounded-3xl shadow-xl p-8 max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl font-semibold mb-4">Share YOUR Testimony</h3>
+                <form action="https://formsubmit.co/sebastianaristizabal0808@gmail.com" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Your name (or Anonymous)" class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600">
+                    <textarea name="story" rows="5" placeholder="Tell us how God changed your life..." class="w-full px-6 py-4 rounded-2xl border focus:outline-none focus:border-emerald-600"></textarea>
+                    <input type="hidden" name="_subject" value="New Testimony from God is real and the devil is a lie!">
+                    <button type="submit" class="w-full bg-emerald-600 text-white py-5 rounded-3xl font-semibold text-xl hover:bg-emerald-700 transition">Submit Testimony</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community -->
+    <section id="community" class="max-w-6xl mx-auto px-6 py-16 bg-white">
+        <h2 class="text-4xl font-bold heading-font text-center mb-8">Community • Leave Comments & Encourage Each Other</h2>
+        <p class="text-center mb-10 text-lg max-w-lg mx-auto">Share encouragement under any post, song, or testimony. Everyone here is fighting the same battle — with God on our side.</p>
+        <div id="disqus_thread" class="max-w-4xl mx-auto bg-emerald-50 rounded-3xl p-8"></div>
+    </section>
+
+    <!-- Get Help Now -->
+    <section class="bg-gradient-to-r from-emerald-600 to-sky-600 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold heading-font mb-6">Need Help Right Now?</h2>
+            <p class="text-2xl mb-10">24/7 confidential support is available</p>
+            <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" class="inline-flex bg-white text-emerald-700 px-8 py-6 rounded-3xl items-center gap-4 text-xl font-semibold hover:scale-105 transition">
+                <i class="fa-solid fa-phone-volume"></i>
+                SAMHSA Helpline<br><span class="text-3xl">1-800-662-HELP</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-emerald-950 text-white py-10 text-center">
+        <p>God is real and the devil is a lie • Updated daily</p>
+        <p class="text-xs mt-4 opacity-75">© 2026 • Free & forever open to anyone who needs hope • Built by SebbyDinero1017</p>
+    </footer>
+
+    <script>
+        // Quotes
+        const quotes = [
+            { text: "We rejoice in our sufferings, knowing that suffering produces endurance, endurance produces character, and character produces hope.", verse: "Romans 5:3-5" },
+            { text: "Come to me, all who labor and are heavy laden, and I will give you rest.", verse: "Matthew 11:28" },
+            { text: "I can do all things through him who strengthens me.", verse: "Philippians 4:13" },
+            { text: "Behold, I will bring to it health and healing, and I will heal them.", verse: "Jeremiah 33:6" }
+        ];
+        let currentQuote = 0;
+        function renderQuote() {
+            document.getElementById("quoteText").innerHTML = `"${quotes[currentQuote].text}"`;
+            document.getElementById("quoteVerse").innerHTML = `<i class="fa-solid fa-book-bible mr-2"></i> ${quotes[currentQuote].verse}`;
+        }
+        function nextQuote() {
+            currentQuote = (currentQuote + 1) % quotes.length;
+            renderQuote();
+        }
+
+        // Articles - CLICKABLE POP-UP
+        const articles = [
+            { title: "How I Surrendered My Addiction to God", excerpt: "The moment I stopped fighting alone and gave it all to Jesus, everything changed.", full: "I was at my lowest. Drugs, alcohol, and pain controlled me. One night I cried out to God and He met me right there. I surrendered everything and He gave me a new life. If you're reading this, He can do the same for you." },
+            { title: "The Devil's Lies vs. God's Truth", excerpt: "Every addiction starts with a lie. God is real — and His truth sets you free.", full: "The devil whispers 'You'll never change' and 'One more time won't hurt.' But God says 'You are a new creation' (2 Corinthians 5:17). Replace every lie with God's Word and watch chains break." },
+            { title: "One Day at a Time With Jesus", excerpt: "Practical faith steps that helped me stay sober today.", full: "1. Start the day with prayer. 2. Read one Bible verse. 3. Tell one person you're trusting God today. 4. End the day thanking Him. Small steps with Jesus = lasting freedom." }
+        ];
+        function renderArticles() {
+            const container = document.getElementById("articlesContainer");
+            container.innerHTML = articles.map((a, i) => `
+                <div onclick="showArticle(${i})" class="bg-white border border-emerald-200 rounded-3xl p-6 hover:shadow-2xl transition cursor-pointer">
+                    <h3 class="font-semibold text-2xl mb-3">${a.title}</h3>
+                    <p class="text-emerald-700">${a.excerpt}</p>
+                    <p class="text-xs text-emerald-500 mt-6">Posted today • Read time: 3 min • Click to read full devotional</p>
+                </div>
+            `).join("");
+        }
+        function showArticle(i) {
+            const a = articles[i];
+            alert(`📖 ${a.title}\n\n${a.full}\n\n\n💡 You can replace this pop-up later with a full page if you want.`);
+        }
+
+        // Testimonies
+        const testimonies = [
+            { name: "Jennifer F.", story: "God set me free from every addiction I ever had." },
+            { name: "Anonymous Brother", story: "Jesus encountered me in my car and brought me back." },
+            { name: "Lauren, 31", story: "The old is gone and I have been made new." }
+        ];
+        function renderTestimonies() {
+            const container = document.getElementById("testimoniesContainer");
+            container.innerHTML = testimonies.map(t => `
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <p class="italic text-lg">"${t.story}"</p>
+                    <p class="mt-6 text-emerald-600 font-semibold">- ${t.name}</p>
+                </div>
+            `).join("");
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+        }
+
+        window.onload = function() {
+            renderQuote();
+            renderArticles();
+            renderTestimonies();
+        };
+    </script>
+
+    <!-- Disqus -->
+    <script>
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://god-is-real-and-the-devil-is-a-lie.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
